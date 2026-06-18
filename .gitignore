@@ -1,0 +1,27 @@
+# === 敏感文件 ===
+.env
+auth.json
+auth.lock
+
+# === 客户隐私数据 ===
+data/active/
+data/archive/
+
+# === 个人运行时数据 ===
+sessions/
+memories/
+logs/
+cache/
+checkpoints/
+gateway.pid
+gateway.lock
+
+# === 数据库文件 ===
+*.db
+*.db-shm
+*.db-wal
+
+# === 临时文件 ===
+*.bak
+*.log
+__pycache__/

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<title>香港行程安排 - {{客户姓名}}</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden}body{font-family:"WenQuanYi Zen Hei","Droid Sans Fallback","Microsoft YaHei",Arial,sans-serif;color:#18335a;background:radial-gradient(circle at 15% 10%,rgba(255,255,255,.28) 0 125px,transparent 127px),radial-gradient(circle at 84% 18%,rgba(130,205,255,.30) 0 165px,transparent 167px),linear-gradient(180deg,#083876 0%,#1264ad 48%,#eef8ff 100%)}
+.poster{position:relative;width:1080px;height:1920px}.watermark{position:absolute;top:54px;left:60px;right:60px;text-align:center;font-family:Georgia,serif;font-size:76px;letter-spacing:15px;color:rgba(255,255,255,.25);font-weight:700}.title{position:absolute;top:132px;left:0;right:0;text-align:center;color:#fff;font-size:88px;line-height:1;font-family:"STXingkai","Xingkai SC","KaiTi","WenQuanYi Zen Hei",serif;font-weight:700;text-shadow:0 5px 18px rgba(0,0,0,.48);z-index:5}.subtitle{position:absolute;top:240px;left:0;right:0;text-align:center;color:#fff;font-size:26px;letter-spacing:5px;z-index:5}.vip{position:absolute;top:346px;left:135px;right:135px;height:62px;border-radius:31px;display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#ffd266,#fff2bb,#ffd266);color:#855600;font-size:28px;font-weight:900;box-shadow:0 14px 30px rgba(15,58,114,.22);z-index:3}.card{position:absolute;top:426px;left:66px;right:66px;height:1240px;background:rgba(255,255,255,.97);border-radius:42px;padding:28px 38px;box-shadow:0 26px 66px rgba(8,42,92,.28);border:2px solid rgba(255,255,255,.65);z-index:3}.section{margin-bottom:15px}.section-title{display:inline-flex;align-items:center;height:38px;padding:0 20px;border-radius:20px;background:linear-gradient(90deg,#135da8,#0b84d8);color:#fff;font-size:23px;font-weight:900;margin-bottom:9px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 12px}.item{background:#f4f9ff;border:1px solid #dcecff;border-radius:16px;padding:10px 15px;min-height:61px}.wide{grid-column:span 2}.label{color:#5c789c;font-size:18px;margin-bottom:2px}.value{color:#12325c;font-size:22px;font-weight:900;line-height:1.18}.schedule{display:flex;flex-direction:column;gap:8px}.row{display:grid;grid-template-columns:112px 1fr;gap:13px;background:#f5faff;border:1px solid #dcecff;border-radius:16px;padding:10px 14px;align-items:start}.time{color:#0b63b4;font-size:22px;font-weight:900;text-align:center;padding-top:2px}.desc{color:#18335a;font-size:22px;line-height:1.22;font-weight:850}.muted{display:block;color:#607b9c;font-size:17px;font-weight:650;margin-top:2px}.contacts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.contact{border-radius:15px;background:#fff8e8;border:1px solid #ffe0a3;padding:10px 14px;font-size:21px;color:#334766;font-weight:900}.notice{background:linear-gradient(180deg,#fff6e4,#fffaf1);border:1px solid #ffd89a;border-radius:18px;padding:11px 18px;color:#4f3a18}.notice ul{margin:0;padding-left:25px}.notice li{font-size:19px;line-height:1.26;margin:4px 0;font-weight:800}.footer{position:absolute;left:70px;right:70px;bottom:72px;color:#fff;text-align:center;z-index:3}.footer .line{width:220px;height:3px;background:rgba(255,255,255,.78);margin:0 auto 16px;border-radius:4px}.footer .text{font-size:22px;letter-spacing:3px;text-shadow:0 2px 8px rgba(0,0,0,.24)}.skyline{position:absolute;left:0;right:0;bottom:0;height:345px;z-index:1;opacity:.48}.building{position:absolute;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(16,90,156,.36));border-radius:8px 8px 0 0}.b1{left:40px;width:72px;height:155px}.b2{left:132px;width:96px;height:205px}.b3{left:252px;width:58px;height:180px}.b4{left:342px;width:120px;height:250px}.b5{left:498px;width:76px;height:195px}.b6{left:620px;width:110px;height:232px}.b7{left:765px;width:84px;height:185px}.b8{left:888px;width:126px;height:220px}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="watermark">ITINERARY</div>
+  <div class="title">香港行程安排</div>
+  <div class="subtitle">HONG KONG VIP SIGNING TRIP</div>
+  <!-- 标题净空：0-330px 禁止放置卡片/标签 -->
+  <div class="vip">✦ VIP 客户赴港投保安排 ✦</div>
+  <div class="card">
+    <div class="section"><div class="section-title">一、基础信息</div><div class="grid">
+      <div class="item"><div class="label">客户</div><div class="value">{{客户姓名}}</div></div>
+      <div class="item"><div class="label">保险公司</div><div class="value">{{保险公司}}</div></div>
+      <div class="item wide"><div class="label">投保产品</div><div class="value">{{投保产品}}</div></div>
+      <div class="item wide"><div class="label">办理时间</div><div class="value">{{办理时间}}</div></div>
+      <div class="item wide"><div class="label">办理地点</div><div class="value">{{办理地点}}</div></div>
+    </div></div>
+    <div class="section"><div class="section-title">二、行程安排</div><div class="schedule">
+      <div class="row"><div class="time">{{时间1}}</div><div class="desc">{{事项1}}<span class="muted">{{备注1}}</span></div></div>
+      <div class="row"><div class="time">{{时间2}}</div><div class="desc">{{事项2}}<span class="muted">{{备注2}}</span></div></div>
+      <div class="row"><div class="time">{{时间3}}</div><div class="desc">{{事项3}}<span class="muted">{{备注3}}</span></div></div>
+      <div class="row"><div class="time">{{时间4}}</div><div class="desc">{{事项4}}<span class="muted">{{备注4}}</span></div></div>
+    </div></div>
+    <div class="section"><div class="section-title">三、出行相关联系人</div><div class="contacts">
+      <div class="contact">{{联系人1}}</div><div class="contact">{{联系人2}}</div>
+    </div></div>
+    <div class="section" style="margin-bottom:0"><div class="section-title">四、重要提醒</div><div class="notice"><ul>
+      <li>客户须本人赴港签署，投保文件不得在内地签署。</li>
+      <li>请携带有效身份证明、通行证 / 护照及近 3 个月住址证明。</li>
+      <li>健康及财务资料必须如实申报；FNA 必须完成并存档。</li>
+      <li>非保证收益仅作说明，不构成承诺；冷静期权益按保单条款执行。</li>
+    </ul></div></div>
+  </div>
+  <div class="skyline"><div class="building b1"></div><div class="building b2"></div><div class="building b3"></div><div class="building b4"></div><div class="building b5"></div><div class="building b6"></div><div class="building b7"></div><div class="building b8"></div></div>
+  <div class="footer"><div class="line"></div><div class="text">请按预约时间抵达办理地点 · 以现场顾问确认为准</div></div>
+</div>
+</body>
+</html>
