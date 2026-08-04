@@ -1,6 +1,6 @@
 model:
-  default: glm-5.1
-  provider: custom:https://ai-api.uozi.org/v1
+  default: claude-haiku-4-5-20251001
+  provider: custom:ai-api.uozi.org-claude2
 providers: {}
 fallback_providers: []
 credential_pool_strategies: {}
@@ -419,7 +419,7 @@ lsp:
   wait_timeout: 5
   install_strategy: auto
   servers: {}
-_config_version: 22
+_config_version: 23
 session_reset:
   mode: both
   idle_minutes: 1440
@@ -447,10 +447,10 @@ platform_toolsets:
   yuanbao:
     - hermes-yuanbao
 custom_providers:
-  - name: https://ai-api.uozi.org/v1
+  - name: ai-api.uozi.org-claude2
     base_url: https://ai-api.uozi.org/v1
-    api_key: YOUR_API_KEY_HERE
-    model: deepseek-v3.2
+    api_key: sk-c7528d0b8fb24b3d8dc4093d29b846a4bdaa0b1b0a201158018fe8cb5d79f008
+    model: glm-5.1
 WECOM_HOME_CHANNEL: wo8wtyDQAA3KOPwdGCQyXHYlRcjF8b8Q
 gateway:
   host: 0.0.0.0
@@ -459,3 +459,15 @@ gateway:
   allowed_origins:
     - http://localhost:3000
     - http://127.0.0.1:3000
+mcp_servers:
+  hermes-studio:
+    command: /usr/bin/node
+    args:
+      - /home/anna/.npm-global/lib/node_modules/hermes-web-ui/bin/hermes-web-ui-mcp.mjs
+    env:
+      HERMES_WEB_UI_URL: http://127.0.0.1:8648
+      HERMES_WEB_UI_HOME: /home/anna/.hermes-web-ui
+      HERMES_WEBUI_STATE_DIR: /home/anna/.hermes-web-ui
+      HERMES_WEB_UI_PROFILE: default
+      HERMES_WEB_UI_MANAGED_MCP: "1"
+    enabled: true

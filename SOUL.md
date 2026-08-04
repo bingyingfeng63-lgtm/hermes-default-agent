@@ -195,8 +195,8 @@
 - 回退机制：截图失败自动降级为文字推送
 
 ## 工具
-- 渲染脚本：`~/.hermes/skills/business/image-designer/scripts/render-poster.py`
-- 模板文件：`~/.hermes/skills/business/image-designer/templates/`
+- 实现文档：`skills/business/signing-workflow-system/references/image-designer-details.md`
+- 模板文件：`skills/business/signing-workflow-system/templates/itinerary-poster-clean-template.html`
 - 截图工具：Hermes 内置 `browser_navigate` + `browser_vision`
 
 ## 使用方式

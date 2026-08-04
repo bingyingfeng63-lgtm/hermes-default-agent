@@ -498,7 +498,8 @@ echo "缴费完成" | hermes run --skill signing-workflow-system --trigger after
 - **Clean Itinerary Poster Template**: `templates/itinerary-poster-clean-template.html` (1080×1920 HTML/CSS fallback template when no blank Canva background is available)
 - **Test Mode Procedures**: `references/test-mode-procedures.md`
 - **Test Mode & Client Handling**: `references/test-mode-and-client-handling.md` (new: test protocols, multi-client name handling, proactive guidance)
-- **Push Control Lessons**: `references/push-control-lessons.md` (new: user feedback analysis, push frequency control, test mode cleanup)
+- **Push Control Lessons**: `references/push-control-lessons.md`
+- **Course Report Handoff**: `references/course-report-handoff.md` (how 小ice prepares content for 小p to write course reports for 深圳技术大学《项目与劳动实践III》; covers: docx template extraction workflow, report template structure (project background/tech stack/system design/key implementation/deployment/testing/summary), 6-category knowledge export format (技术栈/系统目录树/客户案例/关键实现片段/部署环境/困难), docx dependency installation (uv pip install python-docx) and extraction method (write script to /tmp/, execute with `$(uv python find)`), actual session data exports as append-only entries)
 - **Client Handling & Testing Lessons**: `references/client-handling-and-testing-lessons.md` (new: multi-client name handling, concise communication patterns, step-by-step confirmation workflow)
 - **Optimized Interaction Patterns**: `references/optimized-interaction-patterns.md` (new: guided interaction with minimal technical details, black-box file operations, visual-first delivery)
 
