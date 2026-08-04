@@ -498,7 +498,7 @@ echo "缴费完成" | hermes run --skill signing-workflow-system --trigger after
 - **Test Mode & Client Handling**: `references/test-mode-and-client-handling.md` (new: test protocols, multi-client name handling, proactive guidance)
 - **Push Control Lessons**: `references/push-control-lessons.md`
 - **Course Report Handoff**: `references/course-report-handoff.md` (how 小ice prepares content for 小p to write course reports for 深圳技术大学《项目与劳动实践III》; covers: docx template extraction workflow, report template structure (project background/tech stack/system design/key implementation/deployment/testing/summary), 6-category knowledge export format (技术栈/系统目录树/客户案例/关键实现片段/部署环境/困难), docx dependency installation (uv pip install python-docx) and extraction method (write script to /tmp/, execute with `$(uv python find)`), actual session data exports as append-only entries)
-- **Test Fixtures**: `test-fixtures/` (测试案例: 测试客户/REMINDER测试的 HTML+PNG, test-payment-data.json 缴费测试数据)
+- **Test Fixtures**: `test-fixtures/` (测试案例: 测试客户/REMINDER测试/集成测试 GUO_JIAQI·王永生·陈太 的 HTML+PNG, test-payment-data.json 缴费测试数据)
 - **Git Upload Audit**: `references/git-upload-audit.md` (2026-08-04 完整性审计：图片生成资产全部已追踪；image-designer 已并入本 skill（SOUL.md 旧路径已修正）；测试案例 PNG 在 `cache/outputs/png/` 被 gitignore，用户要求上传时须挑样例压缩到 examples/；业务 vs 框架文件分类清单与审计命令)
 - **Client Handling & Testing Lessons**: `references/client-handling-and-testing-lessons.md` (new: multi-client name handling, concise communication patterns, step-by-step confirmation workflow)
 - **Optimized Interaction Patterns**: `references/optimized-interaction-patterns.md` (new: guided interaction with minimal technical details, black-box file operations, visual-first delivery)
