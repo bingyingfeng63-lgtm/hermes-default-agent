@@ -101,7 +101,7 @@ Handles post-signing activities including payment page generation and archiving.
 HTML-based image generation utility used by `postsign-agent` to create payment posters, and by `presign-agent` for itinerary posters.
 
 **Itinerary poster template rule (硬性规定):**
-- **默认模板：维多利亚港背景（王永生 HTML）** — `~/.hermes/cache/outputs/html/王永生-itinerary.html`
+- **默认模板：维多利亚港背景（王永生 HTML）** — `templates/backgrounds/王永生-itinerary.html`
 - CSS 渐变 clean-template 仅作应急备用，非用户明确要求不得使用
 - 生成方法：Python 读取王永生 HTML → 提取 CSS + 背景图 `<img>` 标签（完整标签含 `class="bg-image"`）→ 替换 body 内容 → wkhtmltoimage 渲染
 - **关键陷阱**：提取 img 标签时正则必须匹配完整标签（含 class 属性），否则背景图不显示。详见 `references/itinerary-poster-background-lessons.md`
@@ -489,9 +489,7 @@ echo "缴费完成" | hermes run --skill signing-workflow-system --trigger after
 ## References
 
 ### Detailed Documentation
-- **Client Index System**: `references/client-index-system.md`
-- **Data Directory Structure**: `references/data-directory-restructure.md`
-- **Image Generation Approach**: `references/image-generation-approach.md`
+- **Background Template**: `templates/backgrounds/王永生-itinerary.html` (维多利亚港背景，默认海报模板)
 - **Itinerary Poster Background Lessons**: `references/itinerary-poster-background-lessons.md` (confirm background is blank; never use old completed posters as base art)
 - **Itinerary Poster Visual Checklist**: `references/itinerary-poster-visual-checklist.md` (pre-push checks: title clear, no old data, no duplicates, no truncation, no full phone numbers)
 - **Background Asset Confirmation**: `references/background-asset-confirmation.md` (when the consultant uploads/corrects a background image: inspect format/size, reject old completed posters, prefer confirmed 1080×1920 blank backgrounds, keep replies concise)
@@ -500,6 +498,8 @@ echo "缴费完成" | hermes run --skill signing-workflow-system --trigger after
 - **Test Mode & Client Handling**: `references/test-mode-and-client-handling.md` (new: test protocols, multi-client name handling, proactive guidance)
 - **Push Control Lessons**: `references/push-control-lessons.md`
 - **Course Report Handoff**: `references/course-report-handoff.md` (how 小ice prepares content for 小p to write course reports for 深圳技术大学《项目与劳动实践III》; covers: docx template extraction workflow, report template structure (project background/tech stack/system design/key implementation/deployment/testing/summary), 6-category knowledge export format (技术栈/系统目录树/客户案例/关键实现片段/部署环境/困难), docx dependency installation (uv pip install python-docx) and extraction method (write script to /tmp/, execute with `$(uv python find)`), actual session data exports as append-only entries)
+- **Test Fixtures**: `test-fixtures/` (测试案例: 测试客户/REMINDER测试的 HTML+PNG, test-payment-data.json 缴费测试数据)
+- **Git Upload Audit**: `references/git-upload-audit.md` (2026-08-04 完整性审计：图片生成资产全部已追踪；image-designer 已并入本 skill（SOUL.md 旧路径已修正）；测试案例 PNG 在 `cache/outputs/png/` 被 gitignore，用户要求上传时须挑样例压缩到 examples/；业务 vs 框架文件分类清单与审计命令)
 - **Client Handling & Testing Lessons**: `references/client-handling-and-testing-lessons.md` (new: multi-client name handling, concise communication patterns, step-by-step confirmation workflow)
 - **Optimized Interaction Patterns**: `references/optimized-interaction-patterns.md` (new: guided interaction with minimal technical details, black-box file operations, visual-first delivery)
 
